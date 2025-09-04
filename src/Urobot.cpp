@@ -1,8 +1,8 @@
-#include "legged_template_controller/TemplateController.h"
+#include "Urobot/Urobot.h"
 
 namespace legged {
-bool TemplateController::parserObservation(const std::string& name) {
-  std::cerr << "TemplateController::parserObservation got called with name: " << name << std::endl;
+bool Urobot::parserObservation(const std::string& name) {
+  std::cerr << "Urobot::parserObservation got called with name: " << name << std::endl;
   if (OnnxController::parserObservation(name)) {
     return true;
   }
@@ -18,4 +18,4 @@ bool TemplateController::parserObservation(const std::string& name) {
 
 #include "pluginlib/class_list_macros.hpp"
 
-PLUGINLIB_EXPORT_CLASS(legged::TemplateController, controller_interface::ControllerInterface)
+PLUGINLIB_EXPORT_CLASS(legged::Urobot, controller_interface::ControllerInterface)
